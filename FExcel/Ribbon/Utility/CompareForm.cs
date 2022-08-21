@@ -17,7 +17,6 @@ namespace FExcel.FELoader.Utility
         private const int FIRST_ROW = 8;
         private static readonly int firstYear = Convert.ToInt16(Properties.Settings.Default.FirstYear);
         private static readonly int years = Convert.ToInt16(Properties.Settings.Default.Years);
-
         private static readonly object[,] headerData = new object[5, 2]
         { 
             { "Первый год", "" },
@@ -30,7 +29,8 @@ namespace FExcel.FELoader.Utility
         public static void CreateOrUpdate(LoadListModel loadListModel, IList<ParamModel> paramList)
         {
             var ws = ExcelDataUtil.CreateSheetIfNotExists(loadListModel.TableName);
-            var selectedParams = GetAllExistedParamsList(loadListModel, paramList).Where(p => p.RowID > 0).ToList();
+            var allParams = GetAllExistedParamsList(loadListModel, paramList);
+            var selectedParams = allParams.Where(p => p.RowID > 0).ToList();
             var maxRowID = selectedParams.Select(p => p.RowID).Max();
 
             // Desc
@@ -103,7 +103,6 @@ namespace FExcel.FELoader.Utility
             return range;
         }
 
-
         private static IList<ParamModel> GetAllExistedParamsList(LoadListModel loadListModel, IList<ParamModel> paramsList)
         {
             var ws = ExcelDataUtil.CreateSheetIfNotExists(loadListModel.TableName);
@@ -111,7 +110,7 @@ namespace FExcel.FELoader.Utility
 
             var existedParamsDic = GetExistedParamsDic(loadListModel.TableName);
 
-            var maxRowID = FIRST_ROW;
+            var maxRowID = FIRST_ROW + 1;
             if (existedParamsDic.Count > 0)
                 maxRowID = existedParamsDic.Select(p => p.Value).Max();
 
@@ -126,7 +125,7 @@ namespace FExcel.FELoader.Utility
                     model.RowID = -1;
                     if (model.IsSelected)
                     {
-                        model.RowID = maxRowID + 1;
+                        model.RowID = maxRowID;
                         maxRowID += loadListModel.LoadListItems.Count + 1;
                     }
                 }
@@ -147,10 +146,10 @@ namespace FExcel.FELoader.Utility
             {
                 foreach (Excel.Range row in range.Rows)
                 {
-                    var curParam = row[1, 2].Value2;
+                    var curParam = row.Cells[1, 2].Value2;
                     if (curParam != null)
-                        if (!dic.ContainsKey(curParam) && row.Row > FIRST_ROW)
-                            dic.Add(curParam, row.Row);
+                        if (!dic.ContainsKey(curParam.ToString()) && row.Row > FIRST_ROW)
+                            dic.Add(curParam.ToString(), row.Row);
                 }
             }
 

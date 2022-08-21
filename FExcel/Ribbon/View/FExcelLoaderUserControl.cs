@@ -139,9 +139,17 @@ namespace FExcel.FELoader.View
 
         private void butSettings_Click(object sender, EventArgs e)
         {
-            if (settingsForm == null)
-                settingsForm = new SettingsForm();
-            settingsForm.ShowDialog();
+            try
+            {
+                if (settingsForm == null)
+                    settingsForm = new SettingsForm();
+                settingsForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void butAddCompare_Click(object sender, EventArgs e)
@@ -155,7 +163,6 @@ namespace FExcel.FELoader.View
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void UpdateStatus()
@@ -176,21 +183,47 @@ namespace FExcel.FELoader.View
 
         private void butSelectCategory_Click(object sender, EventArgs e)
         {
-            if (butSelectCategory.Checked) 
-                dataGridViewOG.SelectAll(); 
-            else dataGridViewOG.ClearSelection();
+            try
+            {
+                if (butSelectCategory.Checked)
+                    dataGridViewOG.SelectAll();
+                else dataGridViewOG.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void butSelectLoadList_Click(object sender, EventArgs e)
         {
-            if (butSelectLoadList.Checked)
-                dataGridViewLoad.SelectAll();
-            else dataGridViewLoad.ClearSelection();
+            try
+            {
+                if (butSelectLoadList.Checked)
+                    dataGridViewLoad.SelectAll();
+                else dataGridViewLoad.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dataGridViewLoad_SelectionChanged(object sender, EventArgs e)
         {
-            UpdateStatus();
+            try
+            {
+                UpdateStatus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void butLoad_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

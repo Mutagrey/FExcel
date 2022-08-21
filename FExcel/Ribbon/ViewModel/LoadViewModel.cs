@@ -16,7 +16,6 @@ namespace FExcel.FELoader.ViewModel
 {
     public class LoadViewModel: INotifyPropertyChanged
     {
-
         public IList<LoadListModel> LoadListModels { get; set; }
         
         public LoadViewModel()
@@ -81,33 +80,5 @@ namespace FExcel.FELoader.ViewModel
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-
-
-        //public void GetLoadListItems()
-        //{
-        //    var loadList = new List<LoadListModel>();
-        //    for (int i = 0; i < 2; i++)
-        //    {
-        //        loadList.Add(new LoadListModel() { Id = i, BookName = "FileName" + i, FilePath = @"C:\temp\FileName" + i + ".xlsx", Mest = "Mest" + i, OG = "OG", SheetName = "Sheet" + i, TemplateName = "Template_1" });
-        //    }
-        //    LoadListItems = loadList;
-
-        //    //var excelLoadTableNames = new List<string>();
-        //    //for (int i = 0; i < 5; i++)
-        //    //{
-        //    //    excelLoadTableNames.Add("Table" + i);
-        //    //}
-        //    //ExcelLoadTableNames = excelLoadTableNames;
-
-        //    //for (int i = 0; i < 3; i++)
-        //    //{
-        //    //    TemplatesDic.Add("template" + i, new TemplateModel() { Id = i, Mask = "MASK" + i, Name = "Template_" + i });
-        //    //}
-
-        //    //for (int i = 0; i < 200; i++)
-        //    //{
-        //    //    ParamsDic.Add("template" + i, new ParamModel() { Id = i, IsMFSO = true, IsSelected = true, Name = "Param" + i, RowID = i ^ 2, Formula = new Dictionary<string, string>() { { "Template_1", "G1" }, { "Template_2", "F2" }, { "Template_3", "H5" } } });
-        //    //}
-        //}
     }
 }

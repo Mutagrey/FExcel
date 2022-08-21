@@ -126,24 +126,10 @@
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>999, 19</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="butSelectCategory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAzSURBVDhPY6AKUFRUfADE/0nED6DawQb8l5OTkyQFg/RA
-        tY8aAAKjBgwXAyjLTOQDBgYATmqIHVUV2+UAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="butSelectLoadList.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAzSURBVDhPY6AKUFRUfADE/0nED6DawQb8l5OTkyQFg/RA
-        tY8aAAKjBgwXAyjLTOQDBgYATmqIHVUV2+UAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="toolStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1093, 21</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="butAddList.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -205,6 +191,20 @@
         TQrqUGHiAZIB/4Gu+SbbIFvOsIqBGSpNGKAYgMDEuwaLZggm1jVYNaNi/K7BogET18sfgSrHBFg1oOKj
         ivWKalDlmACLBgiGhQGh9IFVMyFbkQGKRmJtRQZIBhBvKzIA2kpZXhgAwMAAAN3Ch0sF982iAAAAAElF
         TkSuQmCC
+</value>
+  </data>
+  <data name="butSelectCategory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAzSURBVDhPY6AKUFRUfADE/0nED6DawQb8l5OTkyQFg/RA
+        tY8aAAKjBgwXAyjLTOQDBgYATmqIHVUV2+UAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="butSelectLoadList.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAzSURBVDhPY6AKUFRUfADE/0nED6DawQb8l5OTkyQFg/RA
+        tY8aAAKjBgwXAyjLTOQDBgYATmqIHVUV2+UAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="imageListCheck.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

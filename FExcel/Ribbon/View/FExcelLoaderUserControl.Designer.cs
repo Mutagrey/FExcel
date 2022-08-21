@@ -31,8 +31,8 @@ namespace FExcel.FELoader.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FExcelLoaderUserControl));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.loadViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -148,8 +148,8 @@ namespace FExcel.FELoader.View
             this.dataGridViewOG.AllowUserToAddRows = false;
             this.dataGridViewOG.AllowUserToDeleteRows = false;
             this.dataGridViewOG.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewOG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewOG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewOG.AutoGenerateColumns = false;
             this.dataGridViewOG.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewOG.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
@@ -177,8 +177,8 @@ namespace FExcel.FELoader.View
             this.dataGridViewLoad.AllowUserToAddRows = false;
             this.dataGridViewLoad.AllowUserToDeleteRows = false;
             this.dataGridViewLoad.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewLoad.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewLoad.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewLoad.AutoGenerateColumns = false;
             this.dataGridViewLoad.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewLoad.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
@@ -507,6 +507,7 @@ namespace FExcel.FELoader.View
             this.butLoad.Name = "butLoad";
             this.butLoad.Size = new System.Drawing.Size(53, 42);
             this.butLoad.Text = "Load";
+            this.butLoad.Click += new System.EventHandler(this.butLoad_Click);
             // 
             // FExcelLoaderUserControl
             // 

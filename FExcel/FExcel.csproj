@@ -97,6 +97,7 @@
     <Compile Include="Ribbon\Ribbon.cs" />
     <Compile Include="Ribbon\Utility\CompareForm.cs" />
     <Compile Include="Ribbon\Utility\ExcelDataUtil.cs" />
+    <Compile Include="Ribbon\Utility\FELoadManager.cs" />
     <Compile Include="Ribbon\Utility\FESettingsManager.cs" />
     <Compile Include="Ribbon\ViewModel\LoadViewModel.cs" />
     <Compile Include="Ribbon\ViewModel\SettingsViewModel.cs" />
