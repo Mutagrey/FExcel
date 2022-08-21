@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C250D55-FE12-499A-B266-5229D4B62C26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FExcel</RootNamespace>
+    <AssemblyName>FExcel</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDna.Integration, Version=1.1.0.0, Culture=neutral, PublicKeyToken=f225e9659857edbe, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDna.Integration.1.1.0\lib\ExcelDna.Integration.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDna.IntelliSense, Version=1.4.2.0, Culture=neutral, PublicKeyToken=f225e9659857edbe, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDna.IntelliSense.1.4.2\lib\net40\ExcelDna.IntelliSense.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDna.Interop.14.0.1\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDna.Interop.14.0.1\lib\Microsoft.Vbe.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDna.Interop.14.0.1\lib\Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddInManager.cs" />
+    <Compile Include="ADOUtil\ADOCOM.cs" />
+    <Compile Include="ADOUtil\ADOManager.cs" />
+    <Compile Include="ADOUtil\ADOWorksheetFunctions.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Ribbon\CTPManager.cs" />
+    <Compile Include="Helpers\ExcelCalculationManualHelper.cs" />
+    <Compile Include="Helpers\ExcelEchoOffHelper.cs" />
+    <Compile Include="Helpers\ExcelRefConverter.cs" />
+    <Compile Include="Helpers\ExcelSelectionHelper.cs" />
+    <Compile Include="Helpers\ExcelTaskUtil.cs" />
+    <Compile Include="Helpers\GlobalKeyboardHookEventArgs.cs" />
+    <Compile Include="Helpers\InterceptKeys.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ribbon\Model\Category.cs" />
+    <Compile Include="Ribbon\Model\LoadListModel.cs" />
+    <Compile Include="Ribbon\Model\FileElement.cs" />
+    <Compile Include="Ribbon\Model\ParamModel.cs" />
+    <Compile Include="Ribbon\Model\TemplateModel.cs" />
+    <Compile Include="Ribbon\Ribbon.cs" />
+    <Compile Include="Ribbon\Utility\CompareForm.cs" />
+    <Compile Include="Ribbon\Utility\ExcelDataUtil.cs" />
+    <Compile Include="Ribbon\Utility\FESettingsManager.cs" />
+    <Compile Include="Ribbon\ViewModel\LoadViewModel.cs" />
+    <Compile Include="Ribbon\ViewModel\SettingsViewModel.cs" />
+    <Compile Include="Ribbon\View\FExcelLoaderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ribbon\View\FExcelLoaderUserControl.Designer.cs">
+      <DependentUpon>FExcelLoaderUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ribbon\View\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ribbon\View\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FExcel-AddIn.dna" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\FExcel.FELoader.ViewModel.LoadViewModel.datasource" />
+    <None Include="Properties\DataSources\FExcel.FELoader.ViewModel.SettingsViewModel.datasource" />
+    <None Include="Properties\ExcelDna.Build.props" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ribbon\View\FExcelLoaderUserControl.resx">
+      <DependentUpon>FExcelLoaderUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ribbon\View\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadListTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TemplatesTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParamsTable.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets" Condition="Exists('packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets'))" />
+  </Target>
+</Project>
